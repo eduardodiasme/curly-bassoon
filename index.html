@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AZ-900 Pulse Simulados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar card">
+        <div>
+          <p class="eyebrow">Microsoft Certification Trainer</p>
+          <h1>AZ-900 Pulse</h1>
+          <p class="subtitle">Simulados com foco em retenção, confiança e consistência.</p>
+        </div>
+        <button id="openSettings" class="ghost-btn" aria-label="Abrir configurações">
+          ⚙️ Configurações
+        </button>
+      </header>
+
+      <main id="screenArea" class="screen-area"></main>
+
+      <dialog id="settingsDialog" class="settings-dialog">
+        <form method="dialog" class="settings-content">
+          <h2>Preparar para expansão com IA</h2>
+          <p>
+            O modo IA ainda está desativado, mas o backbone está pronto para integração por chave API e ingestão de
+            documentos.
+          </p>
+          <label>
+            Endpoint da API
+            <input id="apiEndpoint" type="url" placeholder="https://api.sua-ia.com/v1" />
+          </label>
+          <label>
+            Chave API (armazenada localmente)
+            <input id="apiKey" type="password" placeholder="sk-..." />
+          </label>
+          <label>
+            Upload base de conteúdo
+            <input id="docUpload" type="file" accept=".pdf,.doc,.docx,.txt,.md" />
+          </label>
+          <p class="settings-hint">Esses dados ficarão em localStorage no seu navegador.</p>
+          <menu>
+            <button value="cancel" class="ghost-btn">Cancelar</button>
+            <button id="saveSettings" value="default" class="primary-btn">Salvar</button>
+          </menu>
+        </form>
+      </dialog>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
